@@ -239,9 +239,9 @@ int main() {
 loop0:
    while (SDL_PollEvent(&e)) {
       if (e.type == SDL_EVENT_QUIT) goto exit0;
-      if (e.type == SDL_EVENT_KEY_DOWN):
+      if (e.type == SDL_EVENT_KEY_DOWN) {
          if (e.key.key == SDLK_SPACE)
-            simulate ^= 1;
+            simulate ^= 1; } // BRUH
    }
 
    fill_surface(surface, 0);
