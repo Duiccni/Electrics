@@ -217,7 +217,7 @@ int main() {
       inv_resistances[i] = 1.0f;
       wires[i] = (Vec2){i, i+1};
       int dx = nodes[i+1].x - nodes[i].x, dy = nodes[i+1].y - nodes[i].y;
-      inv_length[i] = 0.1f / SDL_sqrtf(dx * dx + dy * dy);
+      inv_length[i] = 10.0f / SDL_sqrtf(dx * dx + dy * dy);
    }
 
    const float infinity;
