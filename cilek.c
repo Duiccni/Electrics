@@ -1,9 +1,8 @@
-// C:\"Program Files"\LLVM\bin\clang.exe cilek.c -o cilek.exe -O3 -ffast-math -Iinclude -Llib -lSDL3 -Wno-parentheses
+// C:\"Program Files"\LLVM\bin\clang.exe cilek.c -o cilek.exe -O3 -Iinclude -Llib -lSDL3 -Wno-parentheses
 
 #include "SDL3/SDL.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
 
 float mul2pow(float x, int n) {
    int nx = *(int*)&x, y = nx + (n << 23);
@@ -241,7 +240,8 @@ loop0:
       if (e.type == SDL_EVENT_QUIT) goto exit0;
       if (e.type == SDL_EVENT_KEY_DOWN) {
          if (e.key.key == SDLK_SPACE)
-            simulate ^= 1; } // BRUH
+            simulate ^= 1;
+         }
    }
 
    fill_surface(surface, 0);
